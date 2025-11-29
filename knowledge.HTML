@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAHA Knowledge Tools</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary:#0b3d91;
+  --accent:#ff6b6b;
+  --bg-light:rgba(255,255,255,0.65); /* Lighter than before */
+  --text-muted:#444;
+}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:url('hat2.jpeg') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  color:#06202b;
+}
+header{
+  background:rgba(11,61,145,0.85);
+  color:#fff;
+  padding:18px 16px;
+  font-size:2em;
+  font-weight:900;
+  text-align:center;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.25);
+}
+.navbar{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin:12px 0;
+}
+.nav-btn{
+  background:var(--primary);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  border:none;
+  transition:0.3s;
+}
+.nav-btn:hover, .nav-btn.active{
+  background:#062a70;
+}
+.container{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.tool-card{
+  background:var(--bg-light);
+  backdrop-filter:blur(10px);
+  border-radius:18px;
+  padding:25px;
+  width:90%;
+  max-width:620px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+.tool-title{
+  font-weight:700;
+  font-size:1.3em;
+  color:var(--primary);
+  margin-bottom:12px;
+  border-bottom:2px solid var(--primary);
+  padding-bottom:6px;
+}
+.file-item{
+  margin-bottom:12px;
+  padding:10px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.5);
+}
+.file-item a{
+  font-weight:600;
+  color:var(--primary);
+  text-decoration:none;
+}
+.file-item a:hover{
+  text-decoration:underline;
+}
+.contact-box{
+  margin-top:20px;
+  padding:12px;
+  background:rgba(255,255,255,0.45);
+  border-radius:10px;
+  text-align:center;
+  font-size:0.95em;
+  color:#06202b;
+  font-weight:600;
+}
+.back-btn{
+  position:absolute;
+  top:16px;
+  left:16px;
+  background:var(--primary);
+  color:#fff;
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  z-index:10;
+}
+</style>
+</head>
+<body>
+<header>MAHA Knowledge Tools</header>
+<a href="index.html" class="back-btn">← Back to Portal</a>
+
+<div class="navbar">
+  <button class="nav-btn active" onclick="showCategory('load')">Load Tools</button>
+  <button class="nav-btn" onclick="showCategory('labour')">Labour Tools</button>
+  <button class="nav-btn" onclick="showCategory('appointment')">Appointment Tools</button>
+  <button class="nav-btn" onclick="showCategory('others')">Other Reports</button>
+</div>
+
+<div class="container">
+
+  <!-- LOAD TOOLS -->
+  <div class="tool-card" id="load">
+    <div class="tool-title">LOAD TOOLS</div>
+
+    <div class="file-item">
+      <a href="#" onclick="downloadFile('tools/load/HBOARD REP BY @_U PRO.xlsm')">WORKSHOP ADVISOR LOAD & OCAS</a>
+    </div>
+
+    <div class="file-item">
+      <a href="#" onclick="downloadFile('tools/load/LOAD_TOOL_2.xlsm')">LOAD TOOL 2</a>
+    </div>
+
+    <div class="file-item">
+      <a href="#" onclick="downloadFile('tools/load/LOAD_TOOL_3.xlsm')">LOAD TOOL 3</a>
+    </div>
+
+    <div class="file-item">
+      <a href="#" onclick="downloadFile('tools/load/LOAD_TOOL_4.xlsm')">LOAD TOOL 4</a>
+    </div>
+
+    <div class="contact-box">
+      MAHA<br>
+      Contact Admin for more details or information<br>
+      Use computer name as <b>DEVIL</b> for all Programs
+    </div>
+  </div>
+
+  <!-- LABOUR TOOLS -->
+  <div class="tool-card" id="labour" style="display:none">
+    <div class="tool-title">LABOUR TOOLS</div>
+
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/labour/LABOUR_TOOL_1.xlsm')">LABOUR TOOL 1</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/labour/LABOUR_TOOL_2.xlsm')">LABOUR TOOL 2</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/labour/LABOUR_TOOL_3.xlsm')">LABOUR TOOL 3</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/labour/LABOUR_TOOL_4.xlsm')">LABOUR TOOL 4</a></div>
+
+    <div class="contact-box">
+      MAHA<br>
+      Contact Admin for more details or information<br>
+      Use computer name as <b>DEVIL</b> for all Programs
+    </div>
+  </div>
+
+  <!-- APPOINTMENT TOOLS -->
+  <div class="tool-card" id="appointment" style="display:none">
+    <div class="tool-title">APPOINTMENT TOOLS</div>
+
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/appointment/APPOINTMENT CONVERTIONS BY MAHA.xlsm')">APPOINTMENT TOOL 1</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/appointment/APPOINTMENT_TOOL_2.xlsm')">APPOINTMENT TOOL 2</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/appointment/APPOINTMENT_TOOL_3.xlsm')">APPOINTMENT TOOL 3</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/appointment/APPOINTMENT_TOOL_4.xlsm')">APPOINTMENT TOOL 4</a></div>
+
+    <div class="contact-box">
+      MAHA<br>
+      Contact Admin for more details or information<br>
+      Use computer name as <b>DEVIL</b> for all Programs
+    </div>
+  </div>
+
+  <!-- OTHER REPORTS -->
+  <div class="tool-card" id="others" style="display:none">
+    <div class="tool-title">OTHER REPORTS</div>
+
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/others/OTHER_REPORT_1.xlsm')">OTHER REPORT 1</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/others/OTHER_REPORT_2.xlsm')">OTHER REPORT 2</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/others/OTHER_REPORT_3.xlsm')">OTHER REPORT 3</a></div>
+    <div class="file-item"><a href="#" onclick="downloadFile('tools/others/OTHER_REPORT_4.xlsm')">OTHER REPORT 4</a></div>
+
+    <div class="contact-box">
+      MAHA<br>
+      Contact Admin for more details or information<br>
+      Use computer name as <b>DEVIL</b> for all Programs
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showCategory(cat){
+  const categories=['load','labour','appointment','others'];
+  categories.forEach(c=>{
+    document.getElementById(c).style.display=(c===cat)?'block':'none';
+  });
+  document.querySelectorAll('.nav-btn').forEach(btn=>{
+    btn.classList.remove('active');
+    if(btn.textContent.toLowerCase().includes(cat)){ btn.classList.add('active'); }
+  });
+}
+
+// PASSWORD PROTECTED DOWNLOAD
+function downloadFile(path){
+  let pass = prompt("Enter password to download:");
+  if(pass === "drack star"){
+      window.open(path, "_blank");
+  }
+}
+
+// AUTO CLOSE PAGE IN 120 SECONDS
+setTimeout(() => {
+    window.close();
+}, 120000);
+</script>
+
+</body>
+</html>
